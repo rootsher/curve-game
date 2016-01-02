@@ -13,7 +13,7 @@ function Player(game, controls) {
         height: 10
     };
 
-    this._current = { x: undefined, y: undefined };
+    this._current = { x: null, y: null };
     this._motionVector = { x: 0, y: 0 };
     this._moves = [];
 }
