@@ -7,8 +7,16 @@
 If you don't have global package:
 
 ```
-npm install webpack
+npm install -g webpack
 ```
+
+Install all dependencies:
+
+```
+npm install
+```
+
+## Setup
 
 Run command to build `dist/bundle.js`
 
