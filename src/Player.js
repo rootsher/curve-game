@@ -89,7 +89,11 @@ Player.prototype.move = function move() {
 
 	var requestID = window.requestAnimationFrame(this.move.bind(this), 16);
 
-	if ((this._current.y <= 0) || (this._current.x <= 0) || (this._current.y >= 500) || (this._current.x >= 500)) {
+	if ((this._current.y <= 0) ||
+		(this._current.x <= 0) ||
+		(this._current.x >= this._game.getPlayground().width) ||
+		(this._current.y >= this._game.getPlayground().height)
+	) {
 		document.querySelector('.game .info').classList.remove('hidden');
 		window.cancelAnimationFrame(requestID);
 	}
