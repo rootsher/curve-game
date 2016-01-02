@@ -21,7 +21,6 @@ function Player(game, controls) {
 Player.Motion = function (x, y) {
     this.x = x;
     this.y = y;
-    this.parameters = {};
 };
 
 Player.prototype.draw = function draw() {
@@ -77,8 +76,8 @@ Player.prototype.draw = function draw() {
 };
 
 Player.prototype.move = function move() {
-    var x = this._current.x += this._motionVector.x;
-    var y = this._current.y += this._motionVector.y;
+    var x = (this._current.x += this._motionVector.x);
+    var y = (this._current.y += this._motionVector.y);
 
     var context = this._game.getPlayground().context;
 
@@ -94,14 +93,18 @@ Player.prototype.move = function move() {
 
     var requestID = window.setTimeout(this.move.bind(this), 16);
 
-    if ((this._current.y <= 0) ||
-        (this._current.x <= 0) ||
-        (this._current.x >= this._game.getPlayground().width) ||
-        (this._current.y >= this._game.getPlayground().height)
-    ) {
+    if (this._isSomething()) {
         document.querySelector('.game .info').classList.remove('hidden');
         window.clearTimeout(requestID);
     }
+};
+
+// TODO(piecioshka): set better name
+Player.prototype._isSomething = function () {
+    return (this._current.y <= 0) ||
+        (this._current.x <= 0) ||
+        (this._current.x >= this._game.getPlayground().width) ||
+        (this._current.y >= this._game.getPlayground().height);
 };
 
 module.exports = Player;
