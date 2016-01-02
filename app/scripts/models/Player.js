@@ -1,6 +1,8 @@
 'use strict';
 
 var Utils = require('../common/utils');
+var debug = require('debug');
+var log = debug('player');
 
 function Player(game, controls) {
     this._game = game;
@@ -40,8 +42,7 @@ Player.prototype.draw = function draw() {
     this._motionVector.x = (xRandom / Math.sqrt(Math.pow(xRandom, 2) + Math.pow(yRandom, 2)));
     this._motionVector.y = (yRandom / Math.sqrt(Math.pow(xRandom, 2) + Math.pow(yRandom, 2)));
 
-    //DEBUG:
-    console.log('randomPosition', randomPosition);
+    log('randomPosition', randomPosition);
 
     this.move();
 

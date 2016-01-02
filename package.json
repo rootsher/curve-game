@@ -1,3 +1,6 @@
 {
-    "name": "curve-game"
+  "name": "curve-game",
+  "devDependencies": {
+    "debug": "^2.2.0"
+  }
 }

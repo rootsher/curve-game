@@ -1,5 +1,7 @@
 'use strict';
 
+require('./debug-conf');
+
 var Game = require('./models/game');
 var Player = require('./models/player');
 
