@@ -58,6 +58,10 @@ Player.prototype.draw = function draw() {
 			direction = 1;
 		}
 
+		if (!direction) {
+			return;
+		}
+
 		var vectorPosition = calculateVectorPosition(((direction * 2) * Math.PI) / 60);
 
 		self._motionVector.x = vectorPosition.x;
