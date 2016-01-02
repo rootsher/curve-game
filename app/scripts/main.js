@@ -1,5 +1,9 @@
 'use strict';
 
+require('alertifyjs/build/css/alertify.css');
+require('alertifyjs/build/css/themes/default.css');
+require('alertifyjs/build/css/themes/bootstrap.css');
+
 require('./debug-conf');
 
 var Game = require('./models/game');

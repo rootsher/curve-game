@@ -21,5 +21,13 @@ npm install
 Run command to build `dist/bundle.js`
 
 ```
-webpack
+npm run build
 ```
+
+## Development
+
+```
+npm run watch
+```
+
+Start listener: build package when any file will be modify.

@@ -1,6 +1,7 @@
 'use strict';
 
 var Utils = require('../common/utils');
+var alertify = require('alertifyjs');
 var debug = require('debug');
 var log = debug('player');
 
@@ -94,8 +95,8 @@ Player.prototype.move = function move() {
     var requestID = window.setTimeout(this.move.bind(this), 16);
 
     if (this._isSomething()) {
-        document.querySelector('.game .info').classList.remove('hidden');
         window.clearTimeout(requestID);
+        alertify.alert('Game Over');
     }
 };
 

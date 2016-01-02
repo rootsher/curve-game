@@ -4,5 +4,14 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: './app/dist/'
+    },
+
+    module: {
+        loaders: [
+            {
+                test: /\.css/,
+                loader: 'style-loader!css-loader'
+            }
+        ]
     }
 };
