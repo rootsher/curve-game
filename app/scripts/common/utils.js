@@ -6,8 +6,8 @@ module.exports = {
         var CSSStyles = window.getComputedStyle($DOMElement);
 
         return {
-            width: parseInt(CSSStyles.width || inlineStyles.width || 0),
-            height: parseInt(CSSStyles.height || inlineStyles.height || 0)
+            width: parseInt(CSSStyles.width || inlineStyles.width || 0, 10),
+            height: parseInt(CSSStyles.height || inlineStyles.height || 0, 10)
         };
     },
 
