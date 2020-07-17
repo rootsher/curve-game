@@ -1,0 +1,17 @@
+{
+    "private": true,
+    "name": "curve-game",
+    "scripts": {
+        "clear": "rm -rf node_modules/",
+        "build": "webpack",
+        "watch": "webpack -w"
+    },
+    "devDependencies": {
+        "debug": "^2.2.0"
+    },
+    "dependencies": {
+        "alertifyjs": "^1.6.0",
+        "css-loader": "^0.23.1",
+        "style-loader": "^0.13.0"
+    }
+}

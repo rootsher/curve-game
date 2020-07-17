@@ -1,0 +1,15 @@
+.hidden {
+    display: none;
+}
+
+div.game {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+div.game canvas.playground {
+    width: inherit;
+    height: inherit;
+    border: 3px solid #000;
+}
